@@ -164,6 +164,12 @@ class Harvest(object):
     def toggle_expense_category_active(self, expense_category_id):
         return self._get('/expense_categories/{0}/toggle'.format(expense_category_id))
 
+    ## Tasks
+
+    @property
+    def tasks(self):
+        return self._get('/tasks')
+
     ## Time Tracking
 
     @property
